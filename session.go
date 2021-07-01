@@ -3,7 +3,10 @@ package dgplus
 import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
+	"os"
+	"os/signal"
 	"strings"
+	"syscall"
 )
 
 type DGPSession struct {
@@ -60,6 +63,13 @@ func (s *DGPSession) Open() error {
 	s.DGSession.AddHandler(messageHandler(s))
 
 	return s.DGSession.Open()
+}
+
+// Notify wraps the channel notify code necessary for the bot into a function.
+func (s *DGPSession) Notify() {
+	sc := make(chan os.Signal, 1)
+	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
+	<-sc
 }
 
 func (s *DGPSession) Close() error {
