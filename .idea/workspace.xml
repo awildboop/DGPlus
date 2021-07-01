@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d18084e1-baf3-420f-b3d7-bee1f49d23ee" name="Default Changelist" comment="Add LICENSE">
+    <list default="true" id="d18084e1-baf3-420f-b3d7-bee1f49d23ee" name="Default Changelist" comment="Update LICENSE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DGPlus.go" beforeDir="false" afterPath="$PROJECT_DIR$/DGPlus.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/session.go" beforeDir="false" afterPath="$PROJECT_DIR$/session.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/structs.go" beforeDir="false" afterPath="$PROJECT_DIR$/structs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Add LICENSE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add LICENSE" />
+    <MESSAGE value="Update LICENSE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update LICENSE" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

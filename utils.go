@@ -1,4 +1,4 @@
-package DGPlus
+package dgplus
 
 import "strings"
 

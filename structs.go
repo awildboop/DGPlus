@@ -1,4 +1,4 @@
-package DGPlus
+package dgplus
 
 import "github.com/bwmarrin/discordgo"
 
