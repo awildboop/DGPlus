@@ -23,21 +23,17 @@ type MessageCreateData struct {
 }
 
 func (msg *MessageCreateData) Send(message string) (*discordgo.Message, error) {
-	newMessage, err := msg.DGSession.ChannelMessageSend(msg.ChannelID, message)
-	return newMessage, err
+	return msg.DGSession.ChannelMessageSend(msg.ChannelID, message)
 }
 
 func (msg *MessageCreateData) SendEmbed(embed *discordgo.MessageEmbed) (*discordgo.Message, error) {
-	newMessage, err := msg.DGSession.ChannelMessageSendEmbed(msg.ChannelID, embed)
-	return newMessage, err
+	return msg.DGSession.ChannelMessageSendEmbed(msg.ChannelID, embed)
 }
 
 func (msg *MessageCreateData) SendComplex(content *discordgo.MessageSend) (*discordgo.Message, error) {
-	newMessage, err := msg.DGSession.ChannelMessageSendComplex(msg.ChannelID, content)
-	return newMessage, err
+	return msg.DGSession.ChannelMessageSendComplex(msg.ChannelID, content)
 }
 
 func (msg *MessageCreateData) SendReply(content string) (*discordgo.Message, error) {
-	newMessage, err := msg.DGSession.ChannelMessageSendReply(msg.ChannelID, content, msg.Message.Reference())
-	return newMessage, err
+	return msg.DGSession.ChannelMessageSendReply(msg.ChannelID, content, msg.Message.Reference())
 }
