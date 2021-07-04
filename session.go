@@ -54,6 +54,7 @@ func (s *DGPSession) RegisterCommand(name string, aliases []string, ignoreCaseSe
 	}
 
 	s.Commands = append(s.Commands, cmd)
+	fmt.Printf("Loaded command: %s", cmd.Name)
 	return cmd, nil
 }
 
