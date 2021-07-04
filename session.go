@@ -65,10 +65,14 @@ func (s *DGPSession) Open() error {
 	return s.DGSession.Open()
 }
 
-// Notify wraps the channel notify code necessary for the bot into a function.
-func (s *DGPSession) Notify() {
+// Notify wraps the channel notify code necessary for the bot into a method.
+// Prints a using fmt.Println
+func (s *DGPSession) Notify(a ...interface{}) {
 	sc := make(chan os.Signal, 1)
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
+	if a != nil {
+		fmt.Println(a)
+	}
 	<-sc
 }
 
